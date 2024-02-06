@@ -1,0 +1,113 @@
+{
+  "ng": 
+    [
+      {
+          "name": "Barbados",
+          "iso": "BB"
+      },
+      {
+          "name": "Benin",
+          "iso": "BJ"
+      },
+      {
+          "name": "Burkina Faso",
+          "iso": "BF"
+      },
+      {
+          "name": "Cameroon",
+          "iso": "CM"
+      },
+      {
+          "name": "Cape Verde",
+          "iso": "CV"
+      },
+      {
+          "name": "Chad",
+          "iso": "TD"
+      },
+      {
+          "name": "Cook Islands",
+          "iso": "CK"
+      },
+      {
+          "name": "Ivory Coast",
+          "iso": "CI"
+      },
+      {
+          "name": "Dominica",
+          "iso": "DM"
+      },
+      {
+          "name": "Fiji",
+          "iso": "FJ"
+      },
+      {
+          "name": "Gambia",
+          "iso": "GM"
+      },
+      {
+          "name": "Ghana",
+          "iso": "GH"
+      },
+      {
+          "name": "Guinea",
+          "iso": "GN"
+      },
+      {
+          "name": "Guinea-Bissau",
+          "iso": "GW"
+      },
+      {
+          "name": "Haiti",
+          "iso": "HT"
+      },
+      {
+          "name": "Kiribati",
+          "iso": "KI"
+      },
+      {
+          "name": "Liberia",
+          "iso": "LR"
+      },
+      {
+          "name": "Mali",
+          "iso": "ML"
+      },
+      {
+          "name": "Micronesia",
+          "iso": "FM"
+      },
+      {
+          "name": "Montserrat",
+          "iso": "MS"
+      },
+      {
+          "name": "Niger",
+          "iso": "NE"
+      },
+      {
+          "name": "Rwanda",
+          "iso": "RW"
+      },
+      {
+          "name": "Saint Kitts and Nevis",
+          "iso": "KN"
+      },
+      {
+          "name": "Senegal",
+          "iso": "SN"
+      },
+      {
+          "name": "Sierra Leone",
+          "iso": "SL"
+      },
+      {
+          "name": "Togo",
+          "iso": "TG"
+      },
+      {
+          "name": "Vanuatu",
+          "iso": "VU"
+      }
+    ]
+}

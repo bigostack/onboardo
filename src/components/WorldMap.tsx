@@ -1,9 +1,11 @@
-
 import worldmap from '../assets/worldmap.json';
 import { GenericTemplate } from '../utils/generic';
 
 import cn from 'classnames';
-function WorldMap() {
+
+function WorldMapView({ validCountries }: { validCountries: string[] }) {
+  // get the data from context 
+  // console.log('world map : ', worldmap);
   return (
     <div className="world-map border border-yellow-500 inline-block m-auto">
       <svg
@@ -22,7 +24,7 @@ function WorldMap() {
             <GenericTemplate
               key={mapData.id}
               {...mapData}
-              className={cn(`fill-red-500 hover:fill-green-500`, { 'fill-green-500': mapData.id === 'ng' })}
+              className={cn(`hover:fill-slate-500`, { 'fill-red-500': validCountries.includes(mapData.id) })}
             />
           ))
         }
@@ -31,4 +33,4 @@ function WorldMap() {
   )
 }
 
-export default WorldMap
+export default WorldMapView;
