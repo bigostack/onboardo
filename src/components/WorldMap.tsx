@@ -24,7 +24,12 @@ function WorldMapView({ visaFree, visaOnArrival, eta, visaOnline, visaRequired }
             <GenericTemplate
               key={mapData.id}
               {...mapData}
-              className={cn(`hover:fill-slate-500`, { 'fill-green-500': visaFree.includes(mapData.id) }, { 'fill-green-100': visaOnArrival.includes(mapData.id) }, { 'fill-orange-500': eta.includes(mapData.id) }, { 'fill-red-300': visaOnline.includes(mapData.id) }, { 'fill-blue-700': visaRequired.includes(mapData.id) })}
+              className={cn(`hover:fill-slate-500`,
+              { 'fill-green-500': visaFree.includes(mapData.id) },
+              { 'fill-green-300': visaOnArrival.includes(mapData.id) },
+              { 'fill-blue-500': eta.includes(mapData.id) },
+              { 'fill-red-300': visaOnline.includes(mapData.id) },
+              { 'fill-red-500': visaRequired.includes(mapData.id) })}
             />
           ))
         }
