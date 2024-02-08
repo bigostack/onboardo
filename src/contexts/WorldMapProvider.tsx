@@ -1,13 +1,25 @@
 import { createContext, useState } from "react";
 
 interface WorldMapContextProps {
-  highlightCountries: (countriesName: string) => void;
+  highlightCountries: (countriesName: string[]) => void;
   selectedCountries: string[];
+  isCountryHighlighted: (countryName: string) => boolean;
+  toggleCountry: (countryName: string) => void;
+  highlightCountry: (countryName: string) => void;
+  countriesVisaStatus: object;
 }
+
 export const WorldMapContext = createContext<WorldMapContextProps | null>(null)
 
 function WorldMapProvider({ children }: { children: React.ReactNode }) {
   const [selectedCountries, setSelectedCountries] = useState<string[]>([]);
+  const [countriesVisaStatus, setCountriesVisaStatus] = useState<object>({
+    visaFree: [],
+    visaOnArrival: [],
+    visaOnline: [],
+    visaRequired: [],
+    eta: []
+  })
 
   const isCountryHighlighted = (countryName: string) => {
     return selectedCountries.includes(countryName)
@@ -28,11 +40,24 @@ function WorldMapProvider({ children }: { children: React.ReactNode }) {
     )
   }
 
-  const highlightCountries = (countriesName: string[]) => {
+  const highlightCountries = (countryObject: any) => {
+    const countriesName = Object.values<string[]>(countryObject).flat();
+
+    setCountriesVisaStatus({
+      ...countriesVisaStatus,
+      visaFree: countryObject.visaFree,
+      visaOnArrival: countryObject.visaOnArrival,
+      visaOnline: countryObject.visaOnline,
+      visaRequired: countryObject.visaRequired,
+      eta: countryObject.eta
+    })
+
     setSelectedCountries(prevCountries => (
       prevCountries.concat(countriesName.filter(i => !prevCountries.includes(i))))
     )
   }
+
+
 
   return (
     <WorldMapContext.Provider value={{
@@ -40,7 +65,8 @@ function WorldMapProvider({ children }: { children: React.ReactNode }) {
       toggleCountry,
       highlightCountries,
       highlightCountry,
-      selectedCountries
+      selectedCountries,
+      countriesVisaStatus
     }}>
       {children}
     </WorldMapContext.Provider>

@@ -175,6 +175,10 @@
             "iso": "SO"
         },
         {
+            "name": "Somaliland",
+            "iso": "_somaliland"
+        },
+        {
             "name": "Timor-Leste",
             "iso": "TL"
         },
@@ -233,7 +237,7 @@
         },
         {
             "name": "Congo",
-            "iso": "CG"
+            "iso": "CD"
         },
         {
             "name": "Djibouti",
